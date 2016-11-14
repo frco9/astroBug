@@ -1,7 +1,7 @@
 import { Class } from 'meteor/jagi:astronomy';
 
 import { Offers } from '/imports/collections/offers.js';
-import { Foo } from '/imports/classes/foo.js';
+import { Bar } from '/imports/classes/bar.js';
 
 const Offer = Class.create({
   name: 'Offer',
@@ -13,8 +13,11 @@ const Offer = Class.create({
     title: {
       type: String
     },
-    foo: {
-      type: Foo
+    bar: {
+      type: Bar,
+      default() {
+        return new Bar();
+      }
     }
   }
 });

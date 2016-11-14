@@ -14,7 +14,7 @@ const Foo = Class.create({
     },
     offers: {
       type: [Offer],
-      default: () => []
+      default: () => [new Offer()]
     }
   }
 });
